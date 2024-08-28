@@ -5,17 +5,14 @@
     padding: 60px 0;
   }
   &__container {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, start, start);
     gap: 40px;
     @include desktop {
-      flex-direction: row;
-      justify-content: space-between;
+      @include flex-center(row, space-between, start);
     }
   }
   &__info {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, start, start);
     gap: 10px;
   }
   &__logo {
@@ -40,9 +37,9 @@
     }
   }
   &__comparison {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, start, start);
     gap: 10px;
+    width: 100%;
     @include desktop {
       min-width: 392px;
     }
@@ -50,9 +47,9 @@
   &__comparison-item {
     &--stem,
     &--nonstem {
-      display: flex;
-      flex-direction: column;
+      @include flex-center(column, start, start);
       gap: 5px;
+      width: 100%;
     }
     &--stem .rate__comparison-content {
       width: 100%;
@@ -75,11 +72,9 @@
     }
   }
   &__comparison-content {
-    display: flex;
-    align-items: center;
     gap: 5px;
     padding: 10px;
-    justify-content: flex-end;
+    @include flex-center(row, flex-end, center);
   }
   &__comparison-salary {
     font-weight: 600;

@@ -4,19 +4,14 @@
     padding: 0;
   }
   &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-center(column, start, center);
     gap: 20px;
     @include desktop {
-      flex-direction: row;
-      justify-content: space-between;
+      @include flex-center(row, space-between, center);
     }
   }
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-center(column, start, center);
     gap: 10px;
     @include desktop {
       gap: 30px;
@@ -63,13 +58,11 @@
     }
   }
   &__achievements {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, start, start);
     gap: 10px;
   }
   &__achievement-item {
-    display: flex;
-    align-items: center;
+    @include flex-center(row, start, center);
     gap: 5px;
   }
   &__achievement-image {

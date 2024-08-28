@@ -2,16 +2,10 @@
   background: #2b41b7;
   padding-top: 50px;
   &__container {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, start, center);
     gap: 50px;
-    align-items: center;
     @include desktop {
       position: relative;
-      .btn-get {
-        background: #30c690;
-        margin-bottom: 100px;
-      }
     }
   }
   .title {
@@ -20,10 +14,16 @@
       max-width: 807px;
     }
   }
+  .btn-get {
+    z-index: 2;
+    @include desktop {
+      background: #30c690;
+      margin-bottom: 100px;
+    }
+  }
   &__images {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flex-center(row, space-between, end);
     overflow-x: hidden;
     @include desktop {
       position: absolute;

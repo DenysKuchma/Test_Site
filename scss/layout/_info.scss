@@ -4,16 +4,14 @@
     padding: 60px 0;
   }
   &__container {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, start, start);
     gap: 20px;
     @include desktop {
-      flex-direction: row;
+      @include flex-center(row, start, start);
     }
   }
   &__text {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, start, start);
     gap: 10px;
     @include desktop {
       gap: 20px;
@@ -43,9 +41,7 @@
     width: 100%;
     max-width: 650px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-center(column, start, center);
     gap: 20px;
     padding: 10px;
     border: 1px solid #d0dbf1;
@@ -53,6 +49,8 @@
     border-radius: 10px;
     @include desktop {
       height: min-content;
+      position: sticky;
+      top: 20px;
     }
   }
   .title {
@@ -60,8 +58,7 @@
     line-height: 140%;
   }
   &__form-container {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, start, start);
     gap: 10px;
     width: 100%;
   }

@@ -1,180 +1,151 @@
 .slider {
-  padding: 10px 0 50px 0;
+  padding: 10px 0 50px;
+  overflow-x: hidden;
   @include desktop {
-    padding: 20px 0 60px 0;
-    .title {
+    padding: 20px 0 60px;
+  }
+  .title {
+    font-size: 20px;
+    @include desktop {
       text-align: left;
+      font-size: 32px;
     }
   }
   &__container {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, start, center);
     gap: 10px;
-    align-items: center;
     @include desktop {
-      flex-direction: row;
-      justify-content: space-between;
+      @include flex-center(row, space-between, center);
     }
   }
   &__text-content {
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column, start, start);
     gap: 10px;
     @include desktop {
       gap: 20px;
       max-width: 496px;
     }
   }
-  &__items {
-    display: flex;
-    flex-direction: column;
+  &__list {
+    @include flex-center(column, start, start);
     gap: 5px;
     @include desktop {
       gap: 10px;
     }
   }
-  &__item {
+  &__list-item {
     display: flex;
     gap: 5px;
     @include desktop {
       gap: 10px;
     }
   }
-  &__item-number {
+  &__list-item-number {
     font-weight: 800;
     font-size: 14px;
-    line-height: 171%;
     color: #0d2a54;
     @include desktop {
       font-size: 16px;
-      line-height: 150%;
     }
   }
-  &__item-text {
+  &__list-item-text {
     font-weight: 800;
     font-size: 14px;
-    line-height: 171%;
     color: #0d2a54;
     @include desktop {
       font-size: 16px;
-      line-height: 150%;
     }
   }
-  .slider__content {
+  &__content {
     width: 100%;
+    @include flex-center(column, start, center);
     @include desktop {
       width: auto;
     }
-    .slider-container {
-      width: 300px;
+    .swiper--slider.swiper2 {
+      width: 100%;
+      max-width: 400px;
       margin: 0 auto;
-      overflow: hidden;
+      padding-bottom: 40px;
+
       @include desktop {
-        width: 552px;
-        position: relative;
+        max-width: 552px;
       }
-      .slides {
+      .swiper-slide {
+        height: 276px;
         display: flex;
-        transition: transform 0.5s ease;
-        .slide {
-          border-radius: 4px;
-          min-width: 300px;
-          height: 180px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 24px;
+        justify-content: center;
+        align-items: center;
+        @include flex-center;
+        font-size: 18px;
+        overflow: hidden;
+
+        @include desktop {
+          width: 552px;
+          height: 304px;
+        }
+        &__content {
+          @include flex-center(column, center, center);
+          padding: 20px;
           text-align: center;
-          .main__slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            border: 1px solid #cedce3;
-            height: 100%;
+          background: #fff;
+          border-radius: 10px;
+          height: 100%;
+          width: 100%;
+          border: 1px solid #cedce3;
+          &-image {
+            width: 50px;
+            height: auto;
             border-radius: 10px;
-            background: #fff;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           }
-          @include desktop {
-            min-width: 552px;
-            height: 304px;
-            position: relative;
-            .main__slide {
-              width: 80%;
-            }
+          &-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
           }
-          .after__slider {
-            display: none;
-            @include desktop {
-              display: block;
-              border: 1px solid #cedce3;
-              border-radius: 10px;
-              background: #fff;
-              position: absolute;
-              right: 0;
-              z-index: -1;
-              position: absolute;
-              &-one {
-                right: 42px;
-                width: 8%;
-                height: 90%;
-                z-index: -1;
-              }
-              &-two {
-                right: 28px;
-                width: 6%;
-                height: 80%;
-                z-index: -2;
-              }
-              &-three {
-                right: 18px;
-                width: 4%;
-                height: 70%;
-                z-index: -3;
-              }
-              &-four {
-                right: 8px;
-                width: 2%;
-                height: 60%;
-                z-index: -4;
-              }
-            }
+          &-description {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
           }
         }
       }
-    }
-    .pagination {
-      display: flex;
-      justify-content: center;
-      margin-top: 5px;
-      gap: 5px;
-      @include desktop {
-        padding-top: 15px;
-      }
-      .dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 100%;
-        background: #cedce3;
-        transition: width 0.3s ease, border-radius 0.3s ease;
-      }
-      .dot.active {
-        border-radius: 4px;
-        width: 56px;
-        height: 8px;
-        background: #0d2a54;
+      .swiper-pagination--slider {
+        @include flex-center(row, center, start);
+        margin-top: 20px;
+        .swiper-pagination-bullet {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #cedce3;
+          transition: width 0.3s ease, border-radius 0.3s ease;
+        }
+        .swiper-pagination-bullet-active {
+          border-radius: 4px;
+          width: 56px;
+          height: 8px;
+          background: #0d2a54;
+        }
       }
     }
   }
-  .btn-get-desktop {
-    display: none;
+  &__button {
     @include desktop {
-      display: block;
-    }
-  }
-  @include desktop {
-    .btn-get-phone {
       display: none;
+    }
+    &--desktop {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
+    &--phone {
+      margin: 0 auto;
+      @include desktop {
+        display: none;
+      }
     }
   }
 }
