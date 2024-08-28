@@ -12,7 +12,7 @@
     @include flex-center(column, start, start);
     gap: 40px;
     @include desktop {
-      @include flex-center(row, space-between, start);
+      @include flex-center(row, space-between, center);
     }
   }
   &__info {
