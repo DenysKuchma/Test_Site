@@ -122,8 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
-
   initSwiper();
-
   window.addEventListener("resize", initSwiper);
 });

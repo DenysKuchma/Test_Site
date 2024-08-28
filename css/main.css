@@ -548,7 +548,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url("/images/stroke.svg") no-repeat right 10px center;
+  background: url("../../images/stroke.svg") no-repeat right 10px center;
   background-size: 10px;
 }
 .info__form-button {
