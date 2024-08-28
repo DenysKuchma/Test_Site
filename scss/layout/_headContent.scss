@@ -1,0 +1,107 @@
+.headContent {
+  padding: 40px 0;
+  @include desktop {
+    padding: 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    @include desktop {
+      gap: 30px;
+      padding: 100px 0 50px 0;
+      align-items: self-start;
+    }
+  }
+  .title {
+    font-size: 20px;
+    line-height: 140%;
+    @include desktop {
+      font-size: 48px;
+      line-height: 133%;
+      text-align: left;
+    }
+  }
+  &__grades {
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: 93px;
+    height: 32px;
+    background: #d0dbf1;
+    @include desktop {
+      display: none;
+    }
+    &-text {
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 171%;
+      color: #0d2a54;
+    }
+  }
+  &__main-text {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 143%;
+    color: #0d2a54;
+    @include desktop {
+      font-size: 20px;
+      line-height: 140%;
+    }
+    span {
+      color: #30c690;
+    }
+  }
+  &__achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  &__achievement-image {
+    max-width: 24px;
+  }
+  &__achievement-text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 133%;
+    color: #0d2a54;
+    @include desktop {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  &__image {
+    @include desktop {
+      align-self: end;
+    }
+    &-src {
+      width: 100%;
+      @include desktop {
+        display: none;
+      }
+    }
+    &-src-desk {
+      display: none;
+
+      @include desktop {
+        display: block;
+        min-width: 496px;
+      }
+    }
+  }
+}

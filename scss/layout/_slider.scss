@@ -1,0 +1,177 @@
+.slider {
+  padding: 10px 0 50px 0;
+  @include desktop {
+    padding: 20px 0 60px 0;
+    .title {
+      text-align: left;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include desktop {
+      gap: 20px;
+      max-width: 496px;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    @include desktop {
+      gap: 10px;
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 5px;
+    @include desktop {
+      gap: 10px;
+    }
+  }
+  &__item-number {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 171%;
+    color: #0d2a54;
+    @include desktop {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  &__item-text {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 171%;
+    color: #0d2a54;
+    @include desktop {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  .slider__content {
+    width: 100%;
+    @include desktop {
+      width: auto;
+    }
+    .slider-container {
+      width: 300px;
+      margin: 0 auto;
+      overflow: hidden;
+      @include desktop {
+        width: 552px;
+        position: relative;
+      }
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease;
+        .slide {
+          border-radius: 4px;
+          min-width: 300px;
+          height: 180px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 24px;
+          text-align: center;
+          @include desktop {
+            min-width: 552px;
+            height: 304px;
+            position: relative;
+            .main__slide {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 80%;
+              border: 1px solid #cedce3;
+              height: 100%;
+              border-radius: 10px;
+              background: #fff;
+            }
+          }
+          .after__slider {
+            display: none;
+            @include desktop {
+              display: block;
+              border: 1px solid #cedce3;
+              border-radius: 10px;
+              background: #fff;
+              position: absolute;
+              right: 0;
+              z-index: -1;
+              position: absolute;
+              &-one {
+                right: 42px;
+                width: 8%;
+                height: 90%;
+                z-index: -1;
+              }
+              &-two {
+                right: 28px;
+                width: 6%;
+                height: 80%;
+                z-index: -2;
+              }
+              &-three {
+                right: 18px;
+                width: 4%;
+                height: 70%;
+                z-index: -3;
+              }
+              &-four {
+                right: 8px;
+                width: 2%;
+                height: 60%;
+                z-index: -4;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 5px;
+      gap: 5px;
+      @include desktop {
+        padding-top: 15px;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background: #cedce3;
+        transition: width 0.3s ease, border-radius 0.3s ease;
+      }
+      .dot.active {
+        border-radius: 4px;
+        width: 56px;
+        height: 8px;
+        background: #0d2a54;
+      }
+    }
+  }
+  .btn-get-desktop {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+  @include desktop {
+    .btn-get-phone {
+      display: none;
+    }
+  }
+}

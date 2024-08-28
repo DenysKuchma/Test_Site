@@ -1,0 +1,100 @@
+.rate {
+  background: #fff;
+  padding: 20px 0;
+  @include desktop {
+    padding: 60px 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__logo {
+    max-width: 64px;
+  }
+  &__text {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 143%;
+    color: #0d2a54;
+    @include desktop {
+      font-size: 24px;
+      line-height: 167%;
+    }
+  }
+  &__highlight {
+    &--green {
+      color: #30c690;
+    }
+    &--orange {
+      color: #f90;
+    }
+  }
+  &__comparison {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include desktop {
+      min-width: 392px;
+    }
+  }
+  &__comparison-item {
+    &--stem,
+    &--nonstem {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    &--stem .rate__comparison-content {
+      width: 100%;
+      background: #30c690;
+    }
+    &--nonstem .rate__comparison-content {
+      width: 50%;
+      background: #f90;
+    }
+  }
+  &__comparison-title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 133%;
+    color: #0d2a54;
+    margin-bottom: 5px;
+    @include desktop {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  &__comparison-content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    justify-content: flex-end;
+  }
+  &__comparison-salary {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 133%;
+    text-align: right;
+    @include desktop {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  &__comparison-item--stem .rate__comparison-salary {
+    color: #fff;
+  }
+  &__comparison-item--nonstem .rate__comparison-salary {
+    color: #0d2a54;
+  }
+}

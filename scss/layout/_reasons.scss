@@ -1,0 +1,30 @@
+.reasons {
+  background: #fff;
+  padding: 30px 0;
+  @include desktop {
+    padding: 50px 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    @include desktop {
+      align-items: start;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .title {
+      font-size: 14px;
+      line-height: 143%;
+      @include desktop {
+        font-size: 24px;
+        line-height: 167%;
+        max-width: 600px;
+      }
+      span {
+        color: #30c690;
+      }
+    }
+  }
+}

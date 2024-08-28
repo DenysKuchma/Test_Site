@@ -1,0 +1,12 @@
+.header {
+  padding-top: 20px;
+  &-src {
+    display: block;
+    margin: 0 auto;
+    min-width: 92px;
+    @include desktop {
+      margin: 0;
+      min-width: 114px;
+    }
+  }
+}

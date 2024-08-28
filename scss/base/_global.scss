@@ -1,0 +1,28 @@
+body {
+  background: #faf8f6;
+  font-family: "Montserrat", sans-serif;
+}
+.btn-get {
+  border: #ef4444;
+  border-radius: 4px;
+  width: 168px;
+  height: 56px;
+  background: #ef4444;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+}
+.title {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #0d2a54;
+  @include desktop {
+    font-size: 32px;
+    line-height: 150%;
+  }
+}

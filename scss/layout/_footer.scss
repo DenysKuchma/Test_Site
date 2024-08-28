@@ -1,0 +1,45 @@
+.footer {
+  background: #2b41b7;
+  padding-top: 50px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    @include desktop {
+      position: relative;
+      .btn-get {
+        background: #30c690;
+        margin-bottom: 100px;
+      }
+    }
+  }
+  .title {
+    color: #fff;
+    @include desktop {
+      max-width: 807px;
+    }
+  }
+  &__images {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    @include desktop {
+      position: absolute;
+      bottom: 0;
+      &-girl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        min-width: 223px;
+      }
+      &-girl {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        min-width: 223px;
+      }
+    }
+  }
+}
