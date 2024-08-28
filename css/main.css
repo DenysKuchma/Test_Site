@@ -548,7 +548,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url("../../images/stroke.svg") no-repeat right 10px center;
+  background: url("/Test_Site//images/stroke.svg") no-repeat right 10px center;
   background-size: 10px;
 }
 .info__form-button {
@@ -665,6 +665,16 @@ body {
   font-size: 24px;
   text-align: center;
 }
+.slider .slider__content .slider-container .slides .slide .main__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #cedce3;
+  height: 100%;
+  border-radius: 10px;
+  background: #fff;
+}
 @media (min-width: 1440px) {
   .slider .slider__content .slider-container .slides .slide {
     min-width: 552px;
@@ -672,14 +682,7 @@ body {
     position: relative;
   }
   .slider .slider__content .slider-container .slides .slide .main__slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 80%;
-    border: 1px solid #cedce3;
-    height: 100%;
-    border-radius: 10px;
-    background: #fff;
   }
 }
 .slider .slider__content .slider-container .slides .slide .after__slider {

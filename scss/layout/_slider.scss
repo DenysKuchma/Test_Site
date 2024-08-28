@@ -85,19 +85,22 @@
           align-items: center;
           font-size: 24px;
           text-align: center;
+          .main__slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border: 1px solid #cedce3;
+            height: 100%;
+            border-radius: 10px;
+            background: #fff;
+          }
           @include desktop {
             min-width: 552px;
             height: 304px;
             position: relative;
             .main__slide {
-              display: flex;
-              justify-content: center;
-              align-items: center;
               width: 80%;
-              border: 1px solid #cedce3;
-              height: 100%;
-              border-radius: 10px;
-              background: #fff;
             }
           }
           .after__slider {
