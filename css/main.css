@@ -348,6 +348,10 @@ body {
     padding: 60px 0;
   }
 }
+.rate .rate__logo {
+  max-width: 64px;
+  padding-bottom: 10px;
+}
 .rate__container {
   display: flex;
   flex-direction: column;
@@ -360,7 +364,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
   }
 }
 .rate__info {
@@ -369,9 +373,6 @@ body {
   justify-content: start;
   align-items: start;
   gap: 10px;
-}
-.rate__logo {
-  max-width: 64px;
 }
 .rate__text {
   font-weight: 800;
