@@ -352,6 +352,11 @@ body {
   max-width: 64px;
   padding-bottom: 10px;
 }
+@media (min-width: 1440px) {
+  .rate .rate__logo {
+    max-width: 80px;
+  }
+}
 .rate__container {
   display: flex;
   flex-direction: column;

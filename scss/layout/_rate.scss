@@ -7,6 +7,9 @@
   .rate__logo {
     max-width: 64px;
     padding-bottom: 10px;
+    @include desktop {
+      max-width: 80px;
+    }
   }
   &__container {
     @include flex-center(column, start, start);
